@@ -1,0 +1,98 @@
+from pador1 import encr, decr
+a = "This simple sentence is fortyqlDven bytes long.."
+print(chr(21).encode("hex"))
+print(a.encode("hex"))
+c = encr(a)
+print(c[2].encode("hex"))
+print(c.encode("hex"))
+print("15 is",c[15].encode("hex"))
+print(c[31].encode("hex"))
+print(c[0:30].encode("hex"))
+print("uj",c[0:15].encode("hex"))
+print("kl",c[16:32].encode("hex"))
+
+list1 = list(c)
+#print(list1[15].encode("hex"))
+
+#list1[14] = "1"
+list1[15] = " "
+#list1[13] = ""
+#list1[12] = "6"
+#list1[11] = "6"
+#list1[10] = "6"
+#list1[09] = "6"
+
+
+
+
+c = ''.join(list1)
+#print(list1[15].encode("hex"))
+#print(list1[14].encode("hex"))
+#print(list1[13].encode("hex"))
+#print(list1[12].encode("hex"))
+#print(list1[11].encode("hex"))
+
+
+
+
+for i in range(256):
+  mod = c[0:15] + chr(i) + c[16:32]
+  print(i, decr(mod))
+
+
+
+
+
+
+print(c.encode("hex"))
+
+
+d = decr(c)
+print(d)
+print(d.encode("hex"))
+
+#for i in range(256):
+  #mod = c[0:47] + chr(i)
+  #print i, decr(mod)
+
+
+mod = c[0:47] + chr(46)
+print(chr(46).encode("hex"))
+print("After mod",mod.encode("hex"))
+print(decr(mod))
+
+print(decr(c))
+
+
+
+
+
+
+from Crypto.Cipher import AES
+key = b"0000111122223333"
+iv = b"aaaabbbbccccdddd"
+
+def decr(ciphertext):
+  cipher = AES.new(key, AES.MODE_CBC, iv)
+  return ispkcs7(cipher.decrypt(ciphertext))
+
+def ispkcs7(plaintext):
+  l = len(plaintext)
+  c = ord(plaintext[l-1])                       
+  if (c > 16) or (c < 1):
+    return "PADDING ERROR"
+  if plaintext[l-c:] != chr(c)*c:
+    return "PADDING ERROR"
+  return plaintext
+
+def encr(plaintext):
+  cipher = AES.new(key, AES.MODE_CBC, iv)
+  print(pkcs7(plaintext).encode("hex"))
+  ciphertext = cipher.encrypt(pkcs7(plaintext))
+  return ciphertext
+
+def pkcs7(plaintext):
+  padbytes = 16 - len(plaintext) % 16
+  pad = padbytes * chr(padbytes)
+  return plaintext + pad
+
