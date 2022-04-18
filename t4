@@ -1,0 +1,8 @@
+string = "e115081d5183525e59bef1d9f041a8eee9ae96bdca6e16edb3059e56cc255af1b47f8be2f6a3cf931675032194e3c943"
+count = 0
+   
+for i in range(0, len(string)):  
+    if(string[i] != ' '):  
+        count = count + 1
+    
+print("Total number of characters in a string: " + str(count))
