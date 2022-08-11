@@ -1,0 +1,3 @@
+Windows	4688	A new process has been created
+Windows	4689	A process has exited
+Windows	4696	A primary token was assigned to process
