@@ -1,0 +1,11 @@
+1. 4731(S): A security-enabled local group was created.                  ---7:25:32 AM
+
+2. 4732(S): A member was added to a security-enabled local group.        ---7:26:50 AM
+
+4. 4733(S): A member was removed from a security-enabled local group.    ---7:28:13 AM
+
+6. 4734(S): A security-enabled local group was deleted.                  ---7:36:19 AM
+
+3. 4735(S): A security-enabled local group was changed.                  ---7:26:50 AM
+
+5. 4764(S): A group’s type was changed.                                  ---7:31:36 AM
