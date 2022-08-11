@@ -1,0 +1,6 @@
+Windows	4778	A session was reconnected to a Window Station
+Windows	4779	A session was disconnected from a Window Station
+Windows	4800	The workstation was locked
+Windows	4801	The workstation was unlocked
+Windows	4802	The screen saver was invoked
+Windows	4803	The screen saver was dismissed
