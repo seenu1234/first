@@ -1,0 +1,5 @@
+Windows	1100	The event logging service has shut down
+Windows	1101	Audit events have been dropped by the transport.
+Windows	1102	The audit log was cleared
+Windows	1104	The security Log is now full
+Windows	1105	Event log automatic backup
