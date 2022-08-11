@@ -1,0 +1,7 @@
+Audit Logoff
+Event 4634 S: An account was logged off.
+Event 4647 S: User initiated logoff.
+Audit Logon
+Event 4624 S: An account was successfully logged on.
+Event 4625 F: An account failed to log on.
+Event 4648 S: A logon was attempted using explicit credentials.
