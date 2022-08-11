@@ -1,0 +1,6 @@
+1. Windows	4656	A handle to an object was requested          -- 6:28:14 AM
+2. Windows	4663	An attempt was made to access an object      -- 6:28:14 AM
+3. Windows	4664	An attempt was made to create a hard link    -- 6:29:58 AM
+4. Windows	4670	Permissions on an object were changed        -- 6:32:39 AM
+5. Windows	4658	The handle to an object was closed           -- 6:34:03 AM
+6. Windows	4660	An object was deleted                        -- 6:35:03 AM
